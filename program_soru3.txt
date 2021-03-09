@@ -1,0 +1,42 @@
+
+0x0000 addi x10 x0 a # argüman fonk(10) - x10=10
+0x0004 jal x1 1e # 0x0044 e atla
+0x0008 addi x4 x0 4 # x4 yazmacını 4 ' e ayarla'
+0x000c rem x8 x11 x4 # fonksiyon sonucu gelen x11' in 4' e bölümünden kalanı x8 'e yaz.
+0x0010 addi x12 x0 3 #x12 değerini 3' e ayarla
+0x0014 beq x8 x12 e # if (z%4 == 3)
+0x0018 addi x5 x0 1 #funkisyon dönüş değerini x5' e aldık. Veri belleğine yazmadım.
+0x001c SON
+
+
+0x0030 addi x5 x0 0 #funkisyon dönüş değerini x5' e aldık. Veri belleğine yazmadım.
+0x0034 SON
+
+0x0040 addi x3 x0 1 # x3' ü 1 değerine ayarla
+
+0x0044 jal x2 2 // int z = faktoriyel(10); faktörüyele atla
+
+0x0048 add x9 x0 x10  # argümanı x9 a yaz
+
+0x004c bge x9 x3 60 # eğer x9 1' den büyük veya eşitse bireksilt satırına zıpla
+
+0x0050 addi x11 x0 1 // faktoriyel(0) = 1 #x9 0 a eşitlendiğinde sayac buraya gelecektir. x11 sonuc değerini tutacak
+
+0x0054 addi x9 x9 1 # x9' a 1 ekledim.
+0x0058 mul x11 x11 x9 # sonuc değere x11 ile x9' u çarptım.
+0x005c blt x9 x10 1e # x9 ilk baştaki argüman 10' dan küçükse addi ye atla.
+0x0060 jalr x0 x1 0 # faktöriyel hesaplama bitti ilk fonksiyona kaldığın yerden devam et
+
+0x0098 jalr x0 x0 54 #x9 a bir ekleme satırına zıpla
+
+0x010c subi x9 x9 1 # x9' dan 1 çıkar
+0x0110 jalr x0 x0 4c #bge satırına zıpla
+
+
+
+
+
+
+
+
+

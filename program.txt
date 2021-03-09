@@ -1,0 +1,19 @@
+0x0000 add x10 x0 x10
+0x0004 add x11 x0 x11
+0x0008 add x12 x0 x10
+0x000c add x13 x0 x11
+0x0010 add x14 x0 x10
+0x0014 jal x1 FF6
+0x0018 addi x7 x0 96
+0x001c bge x10 x6 6
+0x0020 addi x10 x0 0
+0x0024 SON
+0x0028 addi x10 x0 1
+0x002c SON
+
+0x2000 add x10 x10 x11
+0x2004 add x10 x10 x12
+0x2008 add x10 x10 x13
+0x200c add x10 x10 x14
+0x2010 sb x5 40(x6)
+0x2014 jalr x0 x1 0

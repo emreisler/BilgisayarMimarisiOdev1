@@ -1,0 +1,14 @@
+unzip 201111046.zip
+cd 201111046
+javac *.java
+
+SORU 1:
+java Benzetim program.txt ornek-config.txt
+
+SORU 2:
+java Benzetim program.txt ornek-config.txt ornek2-config.txt
+
+SORU3*:
+java Benzetim program_soru3.txt ornek-config.txt
+
+*fonk(10) sonucu dönüş değeri yazmac öbeğinde x5 yazmacına yazıldı.
